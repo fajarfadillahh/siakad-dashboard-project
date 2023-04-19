@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Outlet } from "react-router-dom";
 
 // import components
-import Header from "../components/Header";
 import SidebarDesktop from "../components/sidebar/SidebarDesktop";
+import SidebarMobile from "../components/sidebar/SidebarMobile";
+import Header from "../components/Header";
 
 export default function Layout() {
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // handle sidebar open
+  const handleSidebarOpen = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   return (
     <div className="flex h-screen bg-gray-50">
       <SidebarDesktop />
+      <SidebarMobile isSidebarOpen={isSidebarOpen} />
 
       <div className="flex w-full flex-1 flex-col">
-        <Header />
+        <Header handleSidebarOpen={handleSidebarOpen} />
 
         <main className="h-full overflow-y-auto">
           <div className="container mx-auto grid px-6">
