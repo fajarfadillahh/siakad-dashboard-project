@@ -12,16 +12,10 @@ import { Link } from "react-router-dom";
 
 export default function Header({ handleSidebarOpen }) {
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
-  const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
 
   // handle notification click
   function handleNotificationsClick() {
     setIsNotificationsMenuOpen(!isNotificationsMenuOpen);
-  }
-
-  // handle profile click
-  function handleProfileClick() {
-    setIsProfileMenuOpen(!isProfileMenuOpen);
   }
 
   return (
