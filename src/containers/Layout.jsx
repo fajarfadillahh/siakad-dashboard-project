@@ -9,7 +9,7 @@ import Header from "../components/Header";
 export default function Layout() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  // handle sidebar open
+  // handle sidebar open (mobile version)
   const handleSidebarOpen = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };

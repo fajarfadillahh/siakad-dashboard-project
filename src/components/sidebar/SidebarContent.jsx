@@ -1,36 +1,37 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import {
-  HiOutlineHome,
-  HiOutlineClipboard,
-  HiOutlineCollection,
-  HiOutlineChartPie,
-} from "react-icons/hi";
+import { HiHome, HiClipboard, HiCollection, HiChartPie } from "react-icons/hi";
 
 export default function SidebarContent() {
   const location = useLocation();
 
   return (
-    <div className="py-4 text-gray-500">
-      <Link to="#" className="ml-6 text-lg font-bold text-gray-900">
-        Agrikultur
-      </Link>
+    <div className="flex h-full flex-col gap-8 px-6">
+      <div className="flex h-[80px] items-center justify-center">
+        <Link to="#" className="text-lg font-bold text-gray-900">
+          Agrikultur
+        </Link>
+      </div>
 
-      <ul className="mt-6">
+      <ul className="flex flex-col gap-1">
         {[
-          [<HiOutlineHome />, "Dashboard", "/"],
-          [<HiOutlineClipboard />, "Forms", "/forms"],
-          [<HiOutlineCollection />, "Cards", "/cards"],
-          [<HiOutlineChartPie />, "Charts", "/charts"],
+          [<HiHome />, "Dashboard", "/"],
+          [<HiClipboard />, "Forms", "/forms"],
+          [<HiCollection />, "Cards", "/cards"],
+          [<HiChartPie />, "Charts", "/charts"],
         ].map(([icon, name, path], index) => {
           return (
-            <li key={index} className="relative px-6 py-3">
+            <li key={index}>
               <Link
                 to={path}
-                className="inline-flex w-full items-center text-sm font-semibold transition-colors duration-150 hover:text-gray-900"
+                className={`flex h-[48px] items-center gap-2 rounded-md px-4 ${
+                  location.pathname === path
+                    ? "bg-green-600 text-white"
+                    : "bg-transparent text-gray-500 hover:text-gray-600"
+                }`}
               >
-                <span className="text-[1.5rem]">{icon}</span>
-                <p className="ml-4">{name}</p>
+                <span className="text-[1.3rem]">{icon}</span>
+                <p className="font-semibold">{name}</p>
               </Link>
             </li>
           );

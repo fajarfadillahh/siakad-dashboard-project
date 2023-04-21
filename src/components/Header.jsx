@@ -24,7 +24,7 @@ export default function Header({ handleSidebarOpen }) {
   }
 
   return (
-    <header className="z-40 max-h-20 bg-white py-4 shadow-sm">
+    <header className="z-40 max-h-20 bg-white py-4 shadow-[0_2px_12px_rgba(0,0,0,0.05)]">
       <div className="container mx-auto flex h-full items-center justify-between px-6 text-purple-600">
         <button
           className="-ml-1 mr-5 cursor-pointer rounded-md p-0.5 lg:hidden"
