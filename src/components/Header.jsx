@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { Menu, Transition } from "@headlessui/react";
 import {
   HiOutlineMenu,
   HiOutlineSearch,
-  HiOutlineMoon,
-  HiOutlineBell,
+  HiBell,
   HiOutlineUser,
   HiOutlineCog,
   HiOutlineLogout,
 } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 export default function Header({ handleSidebarOpen }) {
   const [isNotificationsMenuOpen, setIsNotificationsMenuOpen] = useState(false);
@@ -24,47 +25,81 @@ export default function Header({ handleSidebarOpen }) {
   }
 
   return (
-    <header className="z-40 max-h-20 bg-white py-4 shadow-[0_2px_12px_rgba(0,0,0,0.05)]">
-      <div className="container mx-auto flex h-full items-center justify-between px-6 text-purple-600">
-        <button
-          className="-ml-1 mr-5 cursor-pointer rounded-md p-0.5 lg:hidden"
-          onClick={handleSidebarOpen}
-        >
-          <HiOutlineMenu className="text-[1.5rem]" />
-        </button>
+    <header className="z-40 flex items-center bg-white shadow-[0_2px_6px_rgba(0,0,0,0.05)]">
+      <div className="container flex h-[80px] max-w-full items-center justify-between gap-6 px-6">
+        <div className="inline-flex items-center gap-4">
+          <button
+            className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-600 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300 lg:hidden"
+            onClick={handleSidebarOpen}
+          >
+            <HiOutlineMenu />
+          </button>
 
-        <div className="flex flex-1 justify-center lg:mr-32">
-          <form className="mr-6 flex w-full max-w-xl items-center gap-2 rounded-md border border-gray-200 px-2 lg:px-4">
-            <HiOutlineSearch className="text-[1.5rem]" />
+          <form className="inline-flex h-[48px] items-center gap-2 rounded-md border border-gray-200 px-2 lg:w-[480px] lg:gap-4 lg:px-4">
+            <div className="text-[1.3rem] text-green-600">
+              <HiOutlineSearch />
+            </div>
 
             <input
-              className="h-12 w-full text-gray-700 outline-none"
-              placeholder="Search for projects"
+              className="h-full w-full font-semibold text-gray-900 outline-none placeholder:font-medium placeholder:text-gray-500"
+              placeholder="Search projects"
             />
           </form>
         </div>
 
-        <ul className="flex items-center gap-3 lg:gap-5">
-          <li className="inline-flex">
-            <button className="cursor-pointer rounded-md p-0.5">
-              <HiOutlineMoon className="text-[1.5rem]" />
+        <div className="flex items-center gap-4">
+          <div className="relative">
+            <button className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-600 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300">
+              <HiBell />
             </button>
-          </li>
-          <li className="inline-flex">
-            <button className="cursor-pointer rounded-md p-0.5">
-              <HiOutlineBell className="text-[1.5rem]" />
-            </button>
-          </li>
-          <li className="relative">
-            <button className="h-10 w-10 overflow-hidden rounded-full">
+
+            {/* dot notification */}
+            <div className="absolute right-1 top-1 h-2 w-2 rounded-full bg-red-500" />
+          </div>
+
+          <Menu as="div" className="relative">
+            <Menu.Button className="h-10 w-10 overflow-hidden rounded-full">
               <img
                 className="h-full w-full object-cover object-center"
                 src="https://images.unsplash.com/photo-1502378735452-bc7d86632805?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&s=aa3a807e1bbdfd4364d1f449eaa96d82"
                 alt="profile img"
               />
-            </button>
-          </li>
-        </ul>
+            </Menu.Button>
+
+            <Transition
+              as={Fragment}
+              enter="transition ease-out duration-100"
+              enterFrom="transform opacity-0 scale-95"
+              enterTo="transform opacity-100 scale-100"
+              leave="transition ease-in duration-75"
+              leaveFrom="transform opacity-100 scale-100"
+              leaveTo="transform opacity-0 scale-95"
+            >
+              <Menu.Items
+                as="ul"
+                className="absolute right-0 z-30 mt-2 flex w-[230px] flex-col gap-1 rounded-md border border-gray-100 bg-white p-3 shadow-sm"
+              >
+                {[
+                  [<HiOutlineUser />, "Profile", "/profile"],
+                  [<HiOutlineCog />, "Settings", "/settings"],
+                  [<HiOutlineLogout />, "Log out", "#"],
+                ].map(([icon, name, path], index) => {
+                  return (
+                    <Menu.Item key={index}>
+                      <Link
+                        to={path}
+                        className="inline-flex items-center gap-3 rounded-md p-2 text-gray-500 hover:bg-gray-100"
+                      >
+                        <div className="text-[1.5rem]">{icon}</div>
+                        <p className="font-semibold">{name}</p>
+                      </Link>
+                    </Menu.Item>
+                  );
+                })}
+              </Menu.Items>
+            </Transition>
+          </Menu>
+        </div>
       </div>
     </header>
   );

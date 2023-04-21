@@ -15,7 +15,7 @@ export default function Layout() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen overflow-hidden bg-gray-50">
       <SidebarDesktop />
       <SidebarMobile isSidebarOpen={isSidebarOpen} />
 
