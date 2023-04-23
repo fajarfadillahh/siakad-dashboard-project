@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import {
-  HiOutlineMenu,
+  HiMenu,
   HiOutlineSearch,
   HiBell,
   HiOutlineUser,
@@ -26,7 +26,7 @@ export default function Header({ handleSidebarOpen }) {
             className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-600 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300 lg:hidden"
             onClick={handleSidebarOpen}
           >
-            <HiOutlineMenu />
+            <HiMenu />
           </button>
 
           <form className="inline-flex h-[48px] items-center gap-2 rounded-md border border-gray-200 px-2 lg:w-[480px] lg:gap-4 lg:px-4">

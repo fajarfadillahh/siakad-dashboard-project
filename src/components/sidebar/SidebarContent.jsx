@@ -1,6 +1,10 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import { HiHome, HiClipboard, HiCollection, HiChartPie } from "react-icons/hi";
+import {
+  HiOutlineHome,
+  HiOutlineCollection,
+  HiOutlineClipboardList,
+} from "react-icons/hi";
 
 export default function SidebarContent() {
   const location = useLocation();
@@ -15,10 +19,9 @@ export default function SidebarContent() {
 
       <ul className="flex flex-col gap-1">
         {[
-          [<HiHome />, "Dashboard", "/"],
-          [<HiClipboard />, "Forms", "/forms"],
-          [<HiCollection />, "Cards", "/cards"],
-          [<HiChartPie />, "Charts", "/charts"],
+          [<HiOutlineHome />, "Dashboard", "/"],
+          [<HiOutlineCollection />, "Swiper", "/swiper"],
+          [<HiOutlineClipboardList />, "Information", "/information"],
         ].map(([icon, name, path], index) => {
           return (
             <li key={index}>
