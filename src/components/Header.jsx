@@ -71,7 +71,7 @@ export default function Header({ handleSidebarOpen }) {
             >
               <Menu.Items
                 as="ul"
-                className="absolute right-0 z-30 mt-2 flex w-[230px] flex-col gap-1 rounded-md border border-gray-100 bg-white p-3 shadow-sm"
+                className="absolute right-0 z-30 mt-2 flex w-[230px] flex-col gap-1 rounded-md border border-gray-100 bg-white p-3 shadow-lg"
               >
                 {[
                   [<HiOutlineUser />, "Profile", "/profile"],

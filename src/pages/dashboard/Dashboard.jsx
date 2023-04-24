@@ -82,7 +82,7 @@ export default function Dashboard() {
   const [selected, setSelected] = useState([]);
   const [orderBy, setOrderBy] = useState("name");
   const [filterName, setFilterName] = useState("");
-  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [rowsPerPage, setRowsPerPage] = useState(25);
 
   const handleOpenMenu = (event) => {
     setOpen(event.currentTarget);
@@ -92,7 +92,7 @@ export default function Dashboard() {
     setOpen(null);
   };
 
-  const handleRequestSort = (event, property) => {
+  const handleRequestSort = (property) => {
     const isAsc = orderBy === property && order === "asc";
     setOrder(isAsc ? "desc" : "asc");
     setOrderBy(property);
@@ -107,7 +107,7 @@ export default function Dashboard() {
     setSelected([]);
   };
 
-  const handleClick = (event, name) => {
+  const handleClick = (name) => {
     const selectedIndex = selected.indexOf(name);
     let newSelected = [];
     if (selectedIndex === -1) {
@@ -125,7 +125,7 @@ export default function Dashboard() {
     setSelected(newSelected);
   };
 
-  const handleChangePage = (event, newPage) => {
+  const handleChangePage = (newPage) => {
     setPage(newPage);
   };
 
@@ -235,7 +235,7 @@ export default function Dashboard() {
                             color="inherit"
                             onClick={handleOpenMenu}
                           >
-                            <Iconify icon={"eva:more-vertical-fill"} />
+                            <Iconify icon={"heroicons-outline:dots-vertical"} />
                           </IconButton>
                         </TableCell>
                       </TableRow>
@@ -275,7 +275,7 @@ export default function Dashboard() {
           </TableContainer>
 
           <TablePagination
-            rowsPerPageOptions={[10, 25, 50]}
+            rowsPerPageOptions={[25, 50, 100]}
             component="div"
             count={USERLIST.length}
             rowsPerPage={rowsPerPage}
@@ -305,12 +305,12 @@ export default function Dashboard() {
         }}
       >
         <MenuItem>
-          <Iconify icon={"eva:edit-fill"} sx={{ mr: 2 }} />
+          <Iconify icon={"heroicons-outline:pencil-alt"} sx={{ mr: 2 }} />
           Edit
         </MenuItem>
 
         <MenuItem sx={{ color: "error.main" }}>
-          <Iconify icon={"eva:trash-2-outline"} sx={{ mr: 2 }} />
+          <Iconify icon={"heroicons-outline:trash"} sx={{ mr: 2 }} />
           Delete
         </MenuItem>
       </Popover>

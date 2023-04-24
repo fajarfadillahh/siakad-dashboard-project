@@ -71,7 +71,7 @@ export default function UserListToolbar({
           startAdornment={
             <InputAdornment position="start">
               <Iconify
-                icon="eva:search-fill"
+                icon="heroicons-outline:search"
                 sx={{ color: "text.disabled", width: 20, height: 20 }}
               />
             </InputAdornment>
@@ -82,7 +82,7 @@ export default function UserListToolbar({
       {numSelected > 0 ? (
         <Tooltip title="Delete">
           <IconButton>
-            <Iconify icon="eva:trash-2-fill" />
+            <Iconify icon="heroicons-outline:trash" />
           </IconButton>
         </Tooltip>
       ) : (

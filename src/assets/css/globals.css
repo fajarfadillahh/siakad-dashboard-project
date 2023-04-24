@@ -2,3 +2,11 @@
 .sidebar-active.active {
   @apply absolute inset-y-0 left-0 w-1 rounded-br-lg rounded-tr-lg bg-purple-600;
 }
+
+/* ::-webkit-scrollbar */
+::-webkit-scrollbar {
+  @apply h-2 w-2 bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-gray-300 hover:bg-gray-400;
+}
