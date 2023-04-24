@@ -3,6 +3,8 @@ import { memo } from "react";
 import { Box } from "@mui/material";
 import { StyledRootScrollbar, StyledScrollbar } from "./styles";
 
+// ----------------------------------------------------------------------
+
 Scrollbar.propTypes = {
   sx: PropTypes.object,
   children: PropTypes.node,

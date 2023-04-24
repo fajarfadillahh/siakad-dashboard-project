@@ -23,7 +23,7 @@ export default function Layout() {
         <Header handleSidebarOpen={handleSidebarOpen} />
 
         <main className="h-full overflow-y-auto">
-          <div className="container mx-auto grid px-6 pb-12">
+          <div className="container mx-auto grid pb-12">
             <Outlet />
           </div>
         </main>
