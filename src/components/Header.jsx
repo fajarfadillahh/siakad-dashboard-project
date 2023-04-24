@@ -23,14 +23,14 @@ export default function Header({ handleSidebarOpen }) {
       <div className="container flex h-[80px] max-w-full items-center justify-between gap-6 px-6">
         <div className="inline-flex items-center gap-4">
           <button
-            className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-600 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300 lg:hidden"
+            className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-500 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300 lg:hidden"
             onClick={handleSidebarOpen}
           >
             <HiMenu />
           </button>
 
           <form className="inline-flex h-[48px] items-center gap-2 rounded-md border border-gray-200 px-2 lg:w-[480px] lg:gap-4 lg:px-4">
-            <div className="text-[1.3rem] text-green-600">
+            <div className="text-[1.3rem] text-green-500">
               <HiOutlineSearch />
             </div>
 
@@ -43,7 +43,7 @@ export default function Header({ handleSidebarOpen }) {
 
         <div className="flex items-center gap-4">
           <div className="relative">
-            <button className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-600 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300">
+            <button className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-500 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300">
               <HiBell />
             </button>
 

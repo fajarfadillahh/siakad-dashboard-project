@@ -1,77 +1,77 @@
-import { alpha } from '@mui/material/styles';
+import { alpha } from "@mui/material/styles";
 
 // ----------------------------------------------------------------------
 
 // SETUP COLORS
 const GREY = {
-  0: '#FFFFFF',
-  100: '#F9FAFB',
-  200: '#F4F6F8',
-  300: '#DFE3E8',
-  400: '#C4CDD5',
-  500: '#919EAB',
-  600: '#637381',
-  700: '#454F5B',
-  800: '#212B36',
-  900: '#161C24',
+  0: "#FFFFFF",
+  100: "#f3f4f6",
+  200: "#e5e7eb",
+  300: "#d1d5db",
+  400: "#9ca3af",
+  500: "#6b7280",
+  600: "#4b5563",
+  700: "#374151",
+  800: "#1f2937",
+  900: "#111827",
 };
 
 const PRIMARY = {
-  lighter: '#D1E9FC',
-  light: '#76B0F1',
-  main: '#2065D1',
-  dark: '#103996',
-  darker: '#061B64',
-  contrastText: '#fff',
+  lighter: "#dbeafe",
+  light: "#93c5fd",
+  main: "#2563eb",
+  dark: "#1d4ed8",
+  darker: "#1e3a8a",
+  contrastText: "#fff",
 };
 
 const SECONDARY = {
-  lighter: '#D6E4FF',
-  light: '#84A9FF',
-  main: '#3366FF',
-  dark: '#1939B7',
-  darker: '#091A7A',
-  contrastText: '#fff',
+  lighter: "#e0f2fe",
+  light: "#7dd3fc",
+  main: "#0ea5e9",
+  dark: "#0369a1",
+  darker: "#075985",
+  contrastText: "#fff",
 };
 
 const INFO = {
-  lighter: '#D0F2FF',
-  light: '#74CAFF',
-  main: '#1890FF',
-  dark: '#0C53B7',
-  darker: '#04297A',
-  contrastText: '#fff',
+  lighter: "#cffafe",
+  light: "#67e8f9",
+  main: "#06b6d4",
+  dark: "#0e7490",
+  darker: "#155e75",
+  contrastText: "#fff",
 };
 
 const SUCCESS = {
-  lighter: '#E9FCD4',
-  light: '#AAF27F',
-  main: '#54D62C',
-  dark: '#229A16',
-  darker: '#08660D',
+  lighter: "#f0fdf4",
+  light: "#86efac",
+  main: "#22c55e",
+  dark: "#15803d",
+  darker: "#14532d",
   contrastText: GREY[800],
 };
 
 const WARNING = {
-  lighter: '#FFF7CD',
-  light: '#FFE16A',
-  main: '#FFC107',
-  dark: '#B78103',
-  darker: '#7A4F01',
+  lighter: "#fef9c3",
+  light: "#fde047",
+  main: "#eab308",
+  dark: "#ca8a04",
+  darker: "#854d0e",
   contrastText: GREY[800],
 };
 
 const ERROR = {
-  lighter: '#FFE7D9',
-  light: '#FFA48D',
-  main: '#FF4842',
-  dark: '#B72136',
-  darker: '#7A0C2E',
-  contrastText: '#fff',
+  lighter: "#fee2e2",
+  light: "#fca5a5",
+  main: "#ef4444",
+  dark: "#dc2626",
+  darker: "#991b1b",
+  contrastText: "#fff",
 };
 
 const palette = {
-  common: { black: '#000', white: '#fff' },
+  common: { black: "#000", white: "#fff" },
   primary: PRIMARY,
   secondary: SECONDARY,
   info: INFO,
@@ -86,7 +86,7 @@ const palette = {
     disabled: GREY[500],
   },
   background: {
-    paper: '#fff',
+    paper: "#fff",
     default: GREY[100],
     neutral: GREY[200],
   },

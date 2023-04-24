@@ -29,7 +29,7 @@ export default function SidebarContent() {
                 to={path}
                 className={`flex h-[48px] items-center gap-3 rounded-md px-3 ${
                   location.pathname === path
-                    ? "bg-green-600 text-white"
+                    ? "bg-green-500 text-white"
                     : "bg-transparent text-gray-500 hover:text-gray-700"
                 }`}
               >
