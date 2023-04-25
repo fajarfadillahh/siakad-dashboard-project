@@ -76,7 +76,7 @@ export default function Header({ handleSidebarOpen }) {
                 {[
                   [<HiOutlineUser />, "Profile", "/profile"],
                   [<HiOutlineCog />, "Settings", "/settings"],
-                  [<HiOutlineLogout />, "Log out", "#"],
+                  [<HiOutlineLogout />, "Log out", "/login"],
                 ].map(([icon, name, path], index) => {
                   return (
                     <Menu.Item key={index}>

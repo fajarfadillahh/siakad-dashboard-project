@@ -1,6 +1,6 @@
 import { faker } from "@faker-js/faker";
 
-const users = [...Array(100)].map(() => ({
+const users = [...Array(32)].map(() => ({
   id: faker.datatype.uuid(),
   idNumber: faker.random.numeric(16),
   name: faker.name.fullName(),
