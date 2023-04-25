@@ -28,17 +28,6 @@ export default function Header({ handleSidebarOpen }) {
           >
             <HiMenu />
           </button>
-
-          <form className="inline-flex h-[48px] items-center gap-2 rounded-md border border-gray-200 px-2 lg:w-[480px] lg:gap-4 lg:px-4">
-            <div className="text-[1.3rem] text-green-500">
-              <HiOutlineSearch />
-            </div>
-
-            <input
-              className="h-full w-full font-semibold text-gray-900 outline-none placeholder:font-medium placeholder:text-gray-500"
-              placeholder="Search projects"
-            />
-          </form>
         </div>
 
         <div className="flex items-center gap-4">
