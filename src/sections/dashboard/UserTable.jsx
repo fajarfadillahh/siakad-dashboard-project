@@ -200,9 +200,14 @@ export default function UserTable() {
                             spacing={2}
                           >
                             <Avatar alt={name} src={avatarUrl} />
-                            <Typography variant="subtitle2" noWrap>
-                              {name}
-                            </Typography>
+                            <Stack direction="column" spacing={0.5}>
+                              <Typography variant="subtitle2" noWrap>
+                                {name}
+                              </Typography>
+                              <Typography variant="caption" noWrap>
+                                {idNumber}
+                              </Typography>
+                            </Stack>
                           </Stack>
                         </TableCell>
 
