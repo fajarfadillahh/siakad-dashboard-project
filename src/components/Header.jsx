@@ -23,7 +23,7 @@ export default function Header({ handleSidebarOpen }) {
       <div className="container flex h-[80px] max-w-full items-center justify-between gap-6 px-6">
         <div className="inline-flex items-center gap-4">
           <button
-            className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-500 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300 lg:hidden"
+            className="inline-flex rounded-md p-0.5 text-[1.5rem] text-blue-500 hover:bg-blue-50 focus:ring-[3px] focus:ring-blue-300 lg:hidden"
             onClick={handleSidebarOpen}
           >
             <HiMenu />
@@ -32,7 +32,7 @@ export default function Header({ handleSidebarOpen }) {
 
         <div className="flex items-center gap-4">
           <div className="relative">
-            <button className="inline-flex rounded-md p-0.5 text-[1.5rem] text-green-500 hover:bg-green-50 focus:ring-[3px] focus:ring-green-300">
+            <button className="inline-flex rounded-md p-0.5 text-[1.5rem] text-blue-500 hover:bg-blue-50 focus:ring-[3px] focus:ring-blue-300">
               <HiBell />
             </button>
 

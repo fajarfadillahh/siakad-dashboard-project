@@ -7,13 +7,13 @@ export default function Login() {
     <main className="flex h-screen w-full items-center justify-center">
       <div className="grid justify-center gap-8">
         <div className="grid justify-items-center">
-          <BiLeaf className="pb-3 text-[4rem] text-green-500" />
+          <BiLeaf className="pb-3 text-[4rem] text-blue-500" />
           <h1 className="pb-2 text-2xl font-extrabold text-gray-900">
             Login to your account
           </h1>
           <p className="inline-flex items-center gap-1 font-medium text-gray-500">
             Don't have an account?
-            <Link to="/register" className="text-green-500 hover:underline">
+            <Link to="/register" className="text-blue-500 hover:underline">
               Register
             </Link>
           </p>
@@ -21,37 +21,33 @@ export default function Login() {
 
         <div className="grid gap-4">
           <label className="grid gap-1">
-            <span className="text-[14px] font-medium text-gray-500">
-              Email Address
-            </span>
+            <span className="font-medium text-gray-500">Email Address</span>
             <input
               type="email"
               placeholder="email@example.com"
-              className="h-[48px] w-full rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:text-[14px] placeholder:font-normal placeholder:text-gray-500 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+              className="h-[48px] w-full rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             />
           </label>
 
           <label className="grid gap-1">
-            <span className="text-[14px] font-medium text-gray-500">
-              Password
-            </span>
+            <span className="font-medium text-gray-500">Password</span>
             <input
               type="password"
               placeholder="Your Password"
-              className="h-[48px] w-full rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:text-[14px] placeholder:font-normal placeholder:text-gray-500 focus:border-green-500 focus:ring focus:ring-green-200 focus:ring-opacity-50"
+              className="h-[48px] w-full rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             />
           </label>
 
           <Link
             to="/"
-            className="justify-self-end text-[14px] font-medium text-green-500 hover:underline"
+            className="justify-self-end text-[14px] font-medium text-blue-500 hover:underline"
           >
             Forgot Password?
           </Link>
 
           <button
             type="submit"
-            className="flex h-[48px] items-center justify-center rounded-md bg-green-500 font-bold text-white hover:bg-green-600"
+            className="flex h-[48px] items-center justify-center rounded-md bg-blue-500 font-bold text-white hover:bg-blue-600"
             onClick={(e) => e.preventDefault()}
           >
             Login
