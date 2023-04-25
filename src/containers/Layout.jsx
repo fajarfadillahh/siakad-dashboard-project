@@ -22,7 +22,7 @@ export default function Layout() {
       <div className="flex w-full flex-1 flex-col">
         <Header handleSidebarOpen={handleSidebarOpen} />
 
-        <main className="h-full overflow-y-auto">
+        <main className="h-full overflow-y-auto px-4">
           <div className="container mx-auto grid pb-12">
             <Outlet />
           </div>

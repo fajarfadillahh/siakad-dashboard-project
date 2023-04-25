@@ -5,9 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Layout from "./containers/Layout";
 
 // import pages
-import Dashboard from "./pages/dashboard/Dashboard";
-import Swiper from "./pages/dashboard/Swiper";
-import Information from "./pages/dashboard/Information";
+import Dashboard from "./pages/dashboard/admin/Dashboard";
+import Swiper from "./pages/dashboard/admin/Swiper";
+import Information from "./pages/dashboard/admin/Information";
 // ---------------------------------
 import Login from "./pages/Login";
 import Register from "./pages/Register";
