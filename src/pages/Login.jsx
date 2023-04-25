@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Login() {
   return (
-    <main className="flex h-screen w-full items-center justify-center bg-gray-100">
+    <main className="flex h-screen w-full items-center justify-center">
       <div className="grid justify-center gap-8">
         <div className="grid justify-items-center">
           <BiLeaf className="pb-3 text-[4rem] text-green-500" />
