@@ -25,6 +25,7 @@
     "react-icons": "^4.8.0",
     "react-router-dom": "^6.10.0",
     "simplebar-react": "^3.2.4",
+    "swiper": "^9.2.4",
     "tailwindcss": "^3.3.1"
   },
   "devDependencies": {
