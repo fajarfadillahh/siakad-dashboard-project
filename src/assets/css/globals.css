@@ -10,3 +10,8 @@
 ::-webkit-scrollbar-thumb {
   @apply rounded-full bg-gray-300 hover:bg-gray-400;
 }
+
+/* ::selection */
+::selection {
+  @apply bg-blue-500 text-white;
+}

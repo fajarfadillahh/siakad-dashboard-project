@@ -9,6 +9,7 @@ export default function Dashboard() {
     <>
       <PageTitle>Dashboard</PageTitle>
 
+      {/* user table */}
       <UserTable />
     </>
   );

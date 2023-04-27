@@ -41,7 +41,7 @@ export default function Login() {
             <span className="font-medium text-gray-500">Password</span>
             <input
               type="password"
-              placeholder="Your Password"
+              placeholder="Enter your password"
               className="h-[48px] rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             />
           </label>
