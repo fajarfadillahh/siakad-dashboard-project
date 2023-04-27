@@ -19,13 +19,13 @@ export default function Login() {
           </p>
         </div>
 
-        <div className="grid gap-4">
+        <div className="grid w-[300px] gap-4">
           <label className="grid gap-1">
             <span className="font-medium text-gray-500">Email Address</span>
             <input
               type="email"
               placeholder="email@example.com"
-              className="h-[48px] w-full rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="h-[48px] rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             />
           </label>
 
@@ -34,7 +34,7 @@ export default function Login() {
             <input
               type="password"
               placeholder="Your Password"
-              className="h-[48px] w-full rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="h-[48px] rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
             />
           </label>
 
