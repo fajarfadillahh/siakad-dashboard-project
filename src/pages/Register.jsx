@@ -1,8 +1,16 @@
 import React from "react";
 import { BiLeaf } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Register() {
+  const navigate = useNavigate();
+
+  // handle navigate to "/" page or "dashboard" page
+  const handleNavigate = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
+
   return (
     <main className="flex h-screen w-full items-center justify-center">
       <div className="grid justify-center gap-8">
@@ -30,6 +38,15 @@ export default function Register() {
           </label>
 
           <label className="grid gap-1">
+            <span className="font-medium text-gray-500">ID Number</span>
+            <input
+              type="number"
+              placeholder="Your ID Number"
+              className="h-[48px] rounded-md border-gray-300 bg-transparent font-semibold text-gray-900 placeholder:font-normal placeholder:text-gray-500 focus:border-blue-500 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+            />
+          </label>
+
+          <label className="grid gap-1">
             <span className="font-medium text-gray-500">Email Address</span>
             <input
               type="email"
@@ -50,7 +67,7 @@ export default function Register() {
           <button
             type="submit"
             className="flex h-[48px] items-center justify-center rounded-md bg-blue-500 font-bold text-white hover:bg-blue-600"
-            onClick={(e) => e.preventDefault()}
+            onClick={handleNavigate}
           >
             Create Account
           </button>

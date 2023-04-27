@@ -1,8 +1,16 @@
 import React from "react";
 import { BiLeaf } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login() {
+  const navigate = useNavigate();
+
+  // handle navigate to "/" page or "dashboard" page
+  const handleNavigate = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
+
   return (
     <main className="flex h-screen w-full items-center justify-center">
       <div className="grid justify-center gap-8">
@@ -39,7 +47,7 @@ export default function Login() {
           </label>
 
           <Link
-            to="/"
+            to="#"
             className="justify-self-end text-[14px] font-medium text-blue-500 hover:underline"
           >
             Forgot Password?
@@ -48,7 +56,7 @@ export default function Login() {
           <button
             type="submit"
             className="flex h-[48px] items-center justify-center rounded-md bg-blue-500 font-bold text-white hover:bg-blue-600"
-            onClick={(e) => e.preventDefault()}
+            onClick={handleNavigate}
           >
             Login
           </button>
