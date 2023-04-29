@@ -5,7 +5,7 @@ import {
   Table,
   Stack,
   Paper,
-  Avatar,
+  // Avatar,
   Popover,
   Checkbox,
   TableRow,
@@ -171,7 +171,7 @@ export default function UserTable() {
                       id,
                       idNumber,
                       name,
-                      avatarUrl,
+                      // avatarUrl,
                       email,
                       streetName,
                       streetAddress,
@@ -199,9 +199,13 @@ export default function UserTable() {
                             alignItems="center"
                             spacing={2}
                           >
-                            <Avatar alt={name} src={avatarUrl} />
-                            <Stack direction="column" spacing={0.5}>
-                              <Typography variant="subtitle2" noWrap>
+                            {/* <Avatar alt={name} src={avatarUrl} /> */}
+                            <Stack
+                              direction="column"
+                              spacing={0.5}
+                              paddingLeft={2}
+                            >
+                              <Typography variant="subtitle1" noWrap>
                                 {name}
                               </Typography>
                               <Typography variant="caption" noWrap>
